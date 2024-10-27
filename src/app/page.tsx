@@ -1,6 +1,9 @@
 import Image from "next/image";
+import Quiz from "@/components/quiz";
 
 export default function Home() {
+  const quizes = ["Math", "Languages", "general culture", "art", "geography"];
+
   return (
     <div className="App">
       <nav className="nav">
@@ -19,6 +22,14 @@ export default function Home() {
           you can view your knowledges and progress.
         </p>
       </nav>
+
+      <main className="main">
+        <section className="quizes flex justify-center gap-3 m-5 flex-wrap">
+          {quizes.map((quiz) => (
+            <Quiz key={quiz} name={quiz} />
+          ))}
+        </section>
+      </main>
     </div>
   );
 }
