@@ -1,9 +1,13 @@
 import Image from "next/image";
-
-export default function Quiz({ name }) {
+import Link from "next/link";
+export default function Quiz({ name, topic = "" }) {
   return (
-    <a
-      href={`/quizes/${name.toLowerCase()}`}
+    <Link
+      href={
+        topic
+          ? `/quizes/${topic}/${name.toLowerCase()}`
+          : `/quizes/${name.toLowerCase()}`
+      }
       className="quiz bg-[#666] rounded-2xl p-3 m-3 w-[120px] h-[120px] cursor-pointer transition-all hover:scale-110"
     >
       <Image
@@ -14,6 +18,6 @@ export default function Quiz({ name }) {
         title={name}
         className="rounded-2xl"
       />
-    </a>
+    </Link>
   );
 }
