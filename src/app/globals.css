@@ -64,6 +64,26 @@ body {
   }
 }
 
+.btn {
+  padding: 15px 20px;
+  background-color: #06f;
+  color: #ededed;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #07d;
+    scale: 1.1;
+  }
+
+  &:active {
+    background-color: #09f;
+    scale: 0.9;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .nav {
     flex-direction: column;
