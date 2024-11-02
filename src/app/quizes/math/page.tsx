@@ -2,7 +2,7 @@ import Quiz from "@/components/quiz";
 import Link from "next/link";
 
 export default function Math() {
-  const topics = ["arithmetic"];
+  const topics = ["arithmetic", "algebra", "geometry"];
 
   return (
     <div className="App">
