@@ -43,25 +43,29 @@ export default function Test({ questions }: Test[]) {
 
   return (
     <form className="m-5" onSubmit={handleSubmit}>
-      {questions.map((question: Test, index: number) => (
-        <div key={index} className="m-3">
-          <h3 className="font-bold">{question.question}</h3>
-          <ol type="a">
-            {question.answers.map((answer, itemIndex: number) => (
-              <li key={itemIndex} style={{ listStyleType: "lower-alpha" }}>
-                <input
-                  type="radio"
-                  className="m-2"
-                  name={`question-${index}`}
-                  value={answer}
-                  onChange={() => handleAnswerChange(index, itemIndex)}
-                />
-                <label>{answer}</label>
-              </li>
-            ))}
-          </ol>
-        </div>
-      ))}
+      <ol type="1">
+        {questions.map((question: Test, index: number) => (
+          <div key={index} className="m-3">
+            <h3 className="font-bold">
+              <li style={{ listStyleType: "number" }}>{question.question}</li>
+            </h3>
+            <ol type="a">
+              {question.answers.map((answer, itemIndex: number) => (
+                <li key={itemIndex} style={{ listStyleType: "lower-alpha" }}>
+                  <input
+                    type="radio"
+                    className="m-2"
+                    name={`question-${index}`}
+                    value={answer}
+                    onChange={() => handleAnswerChange(index, itemIndex)}
+                  />
+                  <label>{answer}</label>
+                </li>
+              ))}
+            </ol>
+          </div>
+        ))}
+      </ol>
       <button type="submit" className="btn">
         Submit
       </button>
