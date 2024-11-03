@@ -1,7 +1,7 @@
 import Test from "@/components/test";
 import Back from "@/components/back";
 
-export default function Arithmetic() {
+export default function Geometry() {
   const test = [
     {
       question: "What is the sum of the interior angles of a triangle?",
@@ -63,7 +63,7 @@ export default function Arithmetic() {
   return (
     <div className="App">
       <Back />
-      <h1 className="title">Arithmetic</h1>
+      <h1 className="title">Geometry</h1>
       <Test questions={test} />
     </div>
   );
