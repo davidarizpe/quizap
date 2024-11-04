@@ -4,7 +4,11 @@ import type { Selected } from "@/types/selected";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function Test({ questions }: Test[]) {
+interface TestProps {
+  questions: Test[];
+}
+
+export default function Test({ questions }: TestProps) {
   const [selectedAnswers, setSelectedAnswers] = useState<Selected[]>([]);
   const [showModal, setShowModal] = useState<boolean>(false);
   const [note, setNote] = useState<string | number>(0);

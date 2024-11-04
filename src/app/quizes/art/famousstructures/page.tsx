@@ -11,17 +11,17 @@ export default function FamousStructures() {
         "Le Corbusier",
         "Louis Kahn",
       ],
-      answer: 0,
+      correct: 0,
     },
     {
       question: "What year was the Great Wall of China completed?",
       answers: ["221 BC", "1368 AD", "1644 AD", "1912 AD"],
-      answer: 1,
+      correct: 1,
     },
     {
       question: "Where is the Colosseum located?",
       answers: ["Greece", "France", "Italy", "Spain"],
-      answer: 2,
+      correct: 2,
     },
     {
       question: "What is the tallest building in the world?",
@@ -31,12 +31,12 @@ export default function FamousStructures() {
         "One World Trade Center",
         "Taipei 101",
       ],
-      answer: 0,
+      correct: 0,
     },
     {
       question: "Who designed the Sydney Opera House?",
       answers: ["Jørn Utzon", "Renzo Piano", "Frank Gehry", "Zaha Hadid"],
-      answer: 0,
+      correct: 0,
     },
   ];
 
