@@ -14,7 +14,7 @@ export default function Quiz({ name, topic = "" }) {
       <Image
         width={100}
         height={100}
-        src={`/assets/images/${name}.png`}
+        src={`/assets/images/${name.toLowerCase()}.png`}
         alt="Logo"
         title={name}
         className="rounded-2xl"
